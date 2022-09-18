@@ -1,0 +1,143 @@
+<section class="section section-secoundary">
+    <h1 class="section-headline">Contact</h1>
+    <form class="form" action="">
+        <table class="form-table">
+            <!-- tr(table row) 行を作る-->
+            <tr>
+                <!-- th(table headline) -->
+                <th>
+                    <label for="menu">
+                        Menu
+                    </label>
+                </th>
+                <!-- td(table data) -->
+                <td>
+                    <!-- プルダウンを作る -->
+                    <select class="select" id="menu">
+                        <!-- valueに設定されてる値がバックエンドにいく -->
+                        <option value="menu-1">Menu 1</option>
+                        <option value="menu-2">Menu 2</option>
+                        <option value="menu-3">Menu 3</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <!--Nameを押せば自動的にフォーカスがテキスト入力にあたる -->
+                    <label for="name">
+                        Name
+                    </label>
+                </th>
+                <td>
+                    <input class="input" type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">
+                        Email
+
+                    </label>
+                </th>
+                <td>
+                    <!-- type=emailだと入力が自動的に半角になる -->
+                    <input class="input" type="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Gender
+                </th>
+                <td>
+                    <label class="radio">
+                        <!-- radioは単一選択、checkboxは複数選択 -->
+                        <input type="radio" name="gender" value="male">Male
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="female">Female
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="gender" value="other">Other
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="detail">
+                        Detail
+                    </label>
+                </th>
+                <td>
+                    <textarea class="textarea" id="detail" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="form-button">
+            <button class="button button-submission" type="submit">Submit</button>
+
+        </div>
+    </form>
+</section>
+
+/* 
+.select,.input,.radio,.textarea
+*/
+
+.select{
+    border-radius: 5px;
+    padding: 10px;
+    border:1px solid #ccc;
+    min-width: 500px;
+}
+.input{
+    border-radius: 5px;
+    padding: 10px;
+    border:1px solid #ccc;
+    min-width: 500px;
+}
+.radio{
+    margin:0px 10px;
+}
+.textarea{
+    border-radius: 5px;
+    padding: 10px;
+    border:1px solid #ccc;
+    min-width: 500px;
+    min-height: 100px;
+}
+@media screen and (max-width:768px){
+    .select,
+    .input,
+    .textarea{
+        min-width: auto;
+        width: 100%;
+    }
+}
+/* 
+form
+*/
+.form-table{
+    /* ブロック要素に対して中央揃え */
+    margin:0 auto;
+}
+.form-table th{
+    padding: 10px;
+    text-align: left;
+}
+.form-table td{
+    padding: 10px;
+}
+.form-button{
+    text-align: center;
+    margin-top: 20px;
+}
+@media screen and (max-width:768px){
+    .form-table,
+    .form-table tbody,
+    .form-table tr,
+    .form-table th,
+    .form-table td{
+        display: block;
+    }
+}

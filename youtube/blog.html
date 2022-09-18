@@ -1,0 +1,156 @@
+<section class="section">
+    <h1 class="section-headline">Blog</h1>
+
+    <ul class="grid grid-col-3">
+        <li class="grid-item">
+            <!-- ひと固まりで完結するコンテンツを作る -->
+            <article class="card">
+                <a href="#" class="card-link">
+                    <span class="card-label">New</span>
+                    <img class="card-image" src="https://dummyimage.com/200x100/000/fff" alt="thumnail">
+                    <div class="card-info">
+                        <time class="card-time" datetime="2022-01-01">2022.01.01</time>
+                        <h1 class="card-headline">Title text text text text text</h1>
+                        <p class="card-description">Text text text text text text text</p>
+                    </div>
+                    <dl class="avator">
+                        <!-- dtは必ずddの前にくる -->
+                        <dt class="avator-name">gonta</dt>
+                        <dd class="avator-image">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="Author">
+                        </dd>
+                    </dl>
+                </a>
+            </article>
+        </li>
+        <li class="grid-item">
+            <article class="card">
+                <a href="#" class="card-link">
+                    <span class="card-label">New</span>
+                    <img class="card-image" src="https://dummyimage.com/200x100/000/fff" alt="thumnail">
+                    <div class="card-info">
+                        <time class="card-time" datetime="2022-01-01">2022.01.01</time>
+                        <h1 class="card-headline">Title text text text text text</h1>
+                        <p class="card-description">Text text text text text text text</p>
+                    </div>
+                    <dl class="avator">
+                        <dt class="avator-name">gonta</dt>
+                        <dd class="avator-image">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="Author">
+                        </dd>
+                    </dl>
+                </a>
+            </article>
+        </li>
+        <li class="grid-item">
+              <article class="card">
+                <a href="#" class="card-link">
+                    <span class="card-label">New</span>
+                    <img class="card-image" src="https://dummyimage.com/200x100/000/fff" alt="thumnail">
+                    <div class="card-info">
+                        <time class="card-time" datetime="2022-01-01">2022.01.01</time>
+                        <h1 class="card-headline">Title text text text text text</h1>
+                        <p class="card-description">Text text text text text text text</p>
+                    </div>
+                    <dl class="avator">
+                        <dt class="avator-name">gonta</dt>
+                        <dd class="avator-image">
+                            <img src="https://dummyimage.com/50x50/000/fff" alt="Author">
+                        </dd>
+                    </dl>
+                </a>
+            </article>
+        </li>
+    </ul>
+    <div class="section-button">
+        <a href="#" class="button">
+            Blog page
+        </a>
+
+    </div>
+</section>
+/*
+card
+*/
+.card{
+    padding: 0 10px;
+}
+.card-link{
+    display: block;
+    color:#333;
+    text-decoration: none;
+    position: relative;
+    /* マウスオーバーで色が変わるまでの時間 */
+    transition: background-color .25s;
+}
+.card-link:hover{
+    background-color:#eee;
+}
+.card-label{
+    /* 親要素にposition: relativeつけて子要素にposition: absoluteつけると自由に動かせる */
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: #999;
+    color:#fff;
+    display: block;
+    padding: 5px 10px;
+    font-size:12px;
+}
+.card-image{
+    width: 100%;
+    height:auto;
+}
+.card-info{
+    padding: 5px 10px;
+}
+/* .card-time{} */
+.card-headline{
+    margin:0;
+}
+.card-description{
+    margin:0;
+}
+/*
+avator
+*/
+.avator{
+    display: flex;
+    /* avatorの画像が先にくるようにする */
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+}
+.avator-name{
+    font-weight: bold;
+    padding-left: 15px;
+}
+.avator-image{
+    margin: 0;
+    /* 角をまるくしてoverflowもいれてはみ出た分をカットしてる */
+    border-radius: 50%;
+    overflow: hidden;
+}
+/*
+button
+*/
+.button{
+    /* dibで出てくる。便利なプロパティ */
+    display: inline-block;
+    color:#fff;
+    font-weight: bold;
+    background-color: #333;
+    text-align: center;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #bbb;
+    transition: box-shadow .25s;
+}
+.button:hover{
+    box-shadow: 0 0 0 #bbb;
+}
+.button.button-submission{
+    background: #92d3ca;
+}

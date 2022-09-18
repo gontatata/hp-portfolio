@@ -1,0 +1,49 @@
+<section class="section">
+    <h1 class="section-headline">About</h1><!--sectionの中ならh1使ってもおｋ-->
+    <!-- 画像とそれ説明するタグ -->
+    <figure class="about">
+        <img class="about-image" src="https://dummyimage.com/600x400/000/fff" alt="About image">
+        <!-- 図とか画像の説明テキストタグ -->
+        <figcaption class="about-caption">
+            <h2 class="about-headline">What we can do?</h2>
+            <p classs="about-description">
+                text text text text text text text text <br>
+                text text text text text text text text <br>
+                text text text text text text text text <br>
+
+            </p>
+        </figcaption>
+    </figure>
+</section>
+
+
+/*
+about
+*/
+.about{
+    margin:0;
+    /* aboutの子要素に対して要素を横並び */
+    display:flex;
+}
+/* .about-image{} */
+.about-caption{
+    padding-left: 15px;
+}
+.about-headline{
+    margin:0 0 20px;
+    font-size: 30px;
+}
+/* .about-description{} */
+@media screen and (max-width:768px){
+    .about{
+        display: block;
+    }
+    .about-image{
+        max-width:100%;
+        margin-bottom: 20px;
+    }
+    .about-headline{
+        font-size: 20px;
+        text-align: center;
+    }
+}
